@@ -1,0 +1,65 @@
+#include <stdio.h>
+
+int main(){
+    int dinheiro, x, y, z, investiu, sobra;
+    float dx, dy, dz, total;
+    
+    scanf("%c",&dinheiro);
+    scanf("%c",&x);
+    scanf("%c",&y);
+    scanf("%c",&z);
+
+    dx = dinheiro * x / 100;
+    dy = dinheiro * y / 100;
+    dz = dinheiro * z / 100;
+    total = dx + dy + dz;
+
+    if(total % 1 == 0){
+        printf("Cada homem ficou com %d, %d e %d reais, respectivamente\n", dx, dy, dz);
+    }else{
+        investiu += 1; // 1 real
+        dinheiro += 1;
+
+        dx = dinheiro * x / 100;
+        dy = dinheiro * y / 100;
+        dz = dinheiro * z / 100;
+        total = dx + dy + dz;
+
+        if(total % 1 == 0 && dinheiro - total >= 2 ){
+            printf("Cada homem ficou com %d, %d e %d reais, respectivamente\n", dx, dy, dz);
+        } else {
+            investiu += 1; // 2 reais
+            dinheiro += 1;
+
+            dx = dinheiro * x / 100;
+            dy = dinheiro * y / 100;
+            dz = dinheiro * z / 100;
+            total = dx + dy + dz;
+
+            if(total % 1 == 0 && dinheiro - total >= 2 ){
+                char l1, l2, l3;
+                scanf("%C %C %C", &l1, &l2, &l3);
+                int soma = l1 + l2 + l3 - 45;
+                printf("%d/n",soma);
+
+            } else {
+                investiu += 1; // 3 reais
+                dinheiro += 1;
+
+                dx = dinheiro * x / 100;
+                dy = dinheiro * y / 100;
+                dz = dinheiro * z / 100;
+                total = dx + dy + dz;
+
+                if(total % 1 == 0 && dinheiro - total >= 2 ){
+
+                } else {
+                    
+                }
+            }
+        }
+    }
+
+
+    return 0;
+}
