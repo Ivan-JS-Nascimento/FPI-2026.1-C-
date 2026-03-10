@@ -23,7 +23,7 @@ int main(){
         ganhou = sobra;
 
     } else {
-        // Tenta com +1 real
+        // tenta com +1 real
         float tx = (dinheiro+1) * x / 100.0;
         float ty = (dinheiro+1) * y / 100.0;
         float tz = (dinheiro+1) * z / 100.0;
@@ -36,7 +36,7 @@ int main(){
             ganhou = sobra;
 
         } else {
-            // Tenta com +2 reais
+            // tenta com +2 reais
             tx = (dinheiro+2) * x / 100.0;
             ty = (dinheiro+2) * y / 100.0;
             tz = (dinheiro+2) * z / 100.0;
@@ -54,7 +54,7 @@ int main(){
                 printf("%d\n", soma);
 
             } else {
-                // Tenta com +3 reais
+                // tenta com +3 reais
                 tx = (dinheiro+3) * x / 100.0;
                 ty = (dinheiro+3) * y / 100.0;
                 tz = (dinheiro+3) * z / 100.0;

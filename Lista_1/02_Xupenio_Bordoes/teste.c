@@ -11,7 +11,7 @@ int main(){
     somaAteN     = N * (N + 1) / 2;
     somaMultiploA  = A * (N / A) * ((N / A) + 1) / 2;
     somaMultiploB  = B * (N / B) * ((N / B) + 1) / 2;
-    somaMultiploAB = AB * (N / AB) * ((N / AB) + 1) / 2;
+    somaMultiploAB = AB * (N / AB) * ((N / AB) + 1) / 2; // calcula os multiplos que sao iguais etre eles pra ser readicionado depois
     
     soma = somaAteN - somaMultiploA - somaMultiploB + somaMultiploAB;
     
