@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/*
+- Utilize ia para me exolicar uma logica que funcina, 
+a partir das explicações da logica, fui escrevendo o codigo 
+e perguntando em quais casos ainda dava problema.
+*/
+
 int main(){
     int N, K, P, primeironum = -1, Q = 0;
     scanf("%d %d %d", &N, &K, &P);
@@ -49,8 +55,6 @@ int main(){
             if(!duplicata){
                 valido = 1;
             }
-            
-            
 
         }
         //guarda o primeiro valido
