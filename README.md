@@ -1,12 +1,15 @@
  Aluno : Ivan Júnior Santana do Nascimento - EC
 
  ---Listas---
- 1-[]
- 2-[]
+ 1-[x]
+ 2-[x]
+ 
  3-[]
  4-[]
+ 
  5-[]
  6-[]
+ 
  7-[]
  8-[]
 10-[]
