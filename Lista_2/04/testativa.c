@@ -43,6 +43,7 @@ int main() {
                 for (j = 0; j < x-h; j++) {
                     int k;
                     for (k = 0; k < coluna-1; k++) printf(" ");
+                    if(coluna == 1) printf(" ");
                     printf(".\n");
                 }
                 mais1 = 1;
