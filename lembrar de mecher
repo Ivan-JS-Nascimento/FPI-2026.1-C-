@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <ctype.h>
+
+#define S 102
+
+int main() {
+    int linha, coluna;
+    scanf("%dx%d", &linha, &coluna);
+
+    char map_area2[linha][coluna+1];
+    for(int i=0; i<linha; i++){
+        scanf("%s", map_area2[i]);
+    }
+
+    // Encontra coordenadas de origem e destino e preenche a copia do mapa
+    int oy = -1, ox = -1, dy = -1, dx = -1;
+    for (int i = 0; i < linha; i++) {
+        for (int j = 0; j < coluna; j++) {
+            if (map_area2[i][j] == 'o') {
+                oy = i; ox = j; 
+            }
+            if (map_area2[i][j] == 'd') {
+                dy = i; dx = j; 
+            }
+        }
+    }
+
+    // indice 0 = esquerda, 1 = direita, 2 = baixo, 3 = cima
+    int x[] = {-1, 1,  0, 0};
+    int y[] = { 0, 0, -1, 1};
+    map_area2[oy][ox] = '0';
+    // a logica é criar varios clones para todos os caminhos possiveis , o que chegar primeiro eu conto as casas que ele andou.
+    int clone_das_sombras = 1;
+
+    while (map_area2[dy][dx]=='d') {
+        for (int i = 0; i < linha; i++) {     // percorrer mapa
+            for (int j = 0; j<coluna; j++) {  // percorrer mapa
+                if (map_area2[i][j] == clone_das_sombras - 1) {
+                    for (int k=0; k<4; k++) { // percorre as ortogonais
+                        if (i + y[k] >= 0 && i + y[k] < linha && j + x[k] >= 0 && j + x[k] < coluna) { // se estiver dentro do mapa
+                            if (map_area2[i + y[k]][j + x[k]] != '#' && !isdigit(map_area2[i + y[k]][j + x[k]])) { // se nao for uma parede ou um local com numero
+                                map_area2[i + y[k]][j + x[k]] = '0' + clone_das_sombras;
+
+                                for (int w = 0; w < linha; w++) {
+                                    printf("%s\n", map_area2[w]);
+                                }
+                                printf("\n");
+                            }
+                        }  
+                    }
+                }
+            }
+        }
+        clone_das_sombras++;
+    }
+
+    
+    return 0;
+}
