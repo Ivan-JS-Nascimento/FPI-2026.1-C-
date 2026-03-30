@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/*
+ nao usei ia diretamente, apenas para casos de testes.
+*/
+
 int main() {
 
     int N;    // numero de clientes
