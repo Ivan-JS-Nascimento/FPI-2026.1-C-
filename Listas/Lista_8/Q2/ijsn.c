@@ -18,10 +18,10 @@ typedef union{
 
 void imprimir_pacote(const Pacote *p, int num){
     printf("Pacote [%d] - Dado Bruto: 0x%08X\n", num, p->raw);
-    printf("  ID do Sensor : %u\n",   p->campos.sensor_id);
-    printf("  Status       : %u\n",   p->campos.status);
-    printf("  Bateria Baixa: %s\n",   p->campos.bateria ? "SIM (ALERTA)" : "Nao");
-    printf("  Temperatura  : %d graus\n", p->campos.temp);
+    printf("ID do Sensor : %u\n",   p->campos.sensor_id);
+    printf("Status : %u\n",   p->campos.status);
+    printf("Bateria Baixa : %s\n",   p->campos.bateria ? "SIM (ALERTA)" : "Nao");
+    printf("Temperatura : %d graus\n", p->campos.temp);
     printf("----------------------------------------------\n");
 }
 
