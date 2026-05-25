@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <string.h> // sem essa linha as linhas 48, 49 e 50 não funcionam
 
 typedef struct {
     int codigo;
